@@ -1,3 +1,6 @@
+# HEY!!!!
+### This is a fork of the GP2040-CE firmware that includes a few customizations of mine with the purpose of being used with Haute42/COSMOX's R16 controller. REFER TO THE ORIGINAL BUILD INSTRUCTIONS FOR THE GP2040-CE FIRMWARE AND USE THIS AT YOUR OWN RISK. I AM NOT RESPONSIBLE FOR ANY DAMAGE TO YOUR CONTROLLER OR PICO. Now back to the readme.
+
 <p align="center">
   <a href="https://gp2040-ce.info">
     <img alt="GP2040-CE" src="https://raw.githubusercontent.com/OpenStickCommunity/Site/main/docs/assets/images/gp2040-ce-logo.png" />
