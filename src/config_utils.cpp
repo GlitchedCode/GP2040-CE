@@ -502,8 +502,8 @@ void ConfigUtils::initUnsetPropertiesWithDefaults(Config& config)
     INIT_UNSET_PROPERTY(config.ledOptions, indexS2, LEDS_BUTTON_S2);
     INIT_UNSET_PROPERTY(config.ledOptions, indexL3, LEDS_BUTTON_L3);
     INIT_UNSET_PROPERTY(config.ledOptions, indexR3, LEDS_BUTTON_R3);
-    INIT_UNSET_PROPERTY(config.ledOptions, indexA1, LEDS_BUTTON_A1);
-    INIT_UNSET_PROPERTY(config.ledOptions, indexA2, LEDS_BUTTON_A2);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexE1, LEDS_BUTTON_A1);
+    INIT_UNSET_PROPERTY(config.ledOptions, indexE2, LEDS_BUTTON_A2);
 
     INIT_UNSET_PROPERTY(config.ledOptions, pledType, PLED_TYPE);
     INIT_UNSET_PROPERTY(config.ledOptions, pledPin1, PLED1_PIN);
@@ -549,8 +549,8 @@ void ConfigUtils::initUnsetPropertiesWithDefaults(Config& config)
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeS2, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeL3, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeR3, 0);
-    INIT_UNSET_PROPERTY(config.animationOptions, customThemeA1, 0);
-    INIT_UNSET_PROPERTY(config.animationOptions, customThemeA2, 0);
+    INIT_UNSET_PROPERTY(config.animationOptions, customThemeE1, 0);
+    INIT_UNSET_PROPERTY(config.animationOptions, customThemeE2, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeUpPressed, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeDownPressed, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeLeftPressed, 0);
@@ -567,8 +567,8 @@ void ConfigUtils::initUnsetPropertiesWithDefaults(Config& config)
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeS2Pressed, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeL3Pressed, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, customThemeR3Pressed, 0);
-    INIT_UNSET_PROPERTY(config.animationOptions, customThemeA1Pressed, 0);
-    INIT_UNSET_PROPERTY(config.animationOptions, customThemeA2Pressed, 0);
+    INIT_UNSET_PROPERTY(config.animationOptions, customThemeE1Pressed, 0);
+    INIT_UNSET_PROPERTY(config.animationOptions, customThemeE2Pressed, 0);
     INIT_UNSET_PROPERTY(config.animationOptions, buttonPressColorCooldownTimeInMs, LEDS_PRESS_COLOR_COOLDOWN_TIME);
 
     // addonOptions.bootselButtonOptions

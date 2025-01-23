@@ -260,9 +260,9 @@ export const BUTTONS = {
 	},
 };
 
-const AUX_BUTTONS = ['S1', 'S2', 'L3', 'R3', 'A1', 'A2'];
-const AUX_BUTTONS_STICKLESS_13 = ['S1', 'S2', 'L3', 'R3', 'A2'];
-const AUX_BUTTONS_STICKLESS_14 = ['S1', 'S2', 'A1', 'A2'];
+const AUX_BUTTONS = ['S1', 'S2', 'L3', 'R3', 'E1', 'E2'];
+const AUX_BUTTONS_STICKLESS_13 = ['S1', 'S2', 'L3', 'R3', 'E2'];
+const AUX_BUTTONS_STICKLESS_14 = ['S1', 'S2', 'E1', 'E2'];
 const AUX_BUTTONS_STICKLESS_16 = ['S1', 'S2'];
 const AUX_BUTTONS_STICKLESS_16_A = ['S1', 'S2'];
 const MAIN_BUTTONS = [
@@ -281,7 +281,7 @@ const MAIN_BUTTONS = [
 ];
 const MAIN_BUTTONS_STICKLESS_13 = [
 	'Up',
-	'A1',
+	'E1',
 	'Down',
 	'Left',
 	'Right',
@@ -312,7 +312,7 @@ const MAIN_BUTTONS_STICKLESS_14 = [
 ];
 const MAIN_BUTTONS_STICKLESS_16 = [
 	'Up',
-	'A1',
+	'E1',
 	'Down',
 	'Left',
 	'Right',
@@ -326,11 +326,11 @@ const MAIN_BUTTONS_STICKLESS_16 = [
 	'R2',
 	'R3',
 	'L3',
-	'A2',
+	'E2',
 ];
 const MAIN_BUTTONS_STICKLESS_16_A = [
 	'Up',
-	'A1',
+	'E1',
 	'Down',
 	'Left',
 	'Right',
@@ -344,7 +344,7 @@ const MAIN_BUTTONS_STICKLESS_16_A = [
 	'R2',
 	'R3',
 	'L3',
-	'A2',
+	'E2',
 ];
 
 const STICK_LAYOUT = [
@@ -371,7 +371,7 @@ const STICKLESS_LAYOUT = [
 const STICKLESS_13_LAYOUT = [
 	['Left', null, null],
 	['Down', null, null],
-	['A1', null, null],
+	['E1', null, null],
 	['Right', null, null],
 	[null, 'Up', null],
 	['B3', 'B1', null],
@@ -393,9 +393,9 @@ const STICKLESS_14_LAYOUT = [
 
 const STICKLESS_16_LAYOUT = [
 	[null, 'Left', null, null],
-	['A1', 'Down', null, null],
+	['E1', 'Down', null, null],
 	[null, 'Right', null, 'L3'],
-	['A2', 'B3', 'B1', 'Up'],
+	['E2', 'B3', 'B1', 'Up'],
 	[null, 'B4', 'B2', 'R3'],
 	[null, 'R1', 'R2', null],
 	[null, 'L1', 'L2', null],
@@ -404,9 +404,9 @@ const STICKLESS_16_LAYOUT = [
 const STICKLESS_16_A_LAYOUT = [
 	['L3', null, null, null],
 	[null, 'Left', null, null],
-	['A1', 'Down', null, null],
+	['E1', 'Down', null, null],
 	[null, 'Right', null, null],
-	['A2', 'B3', 'B1', 'Up'],
+	['E2', 'B3', 'B1', 'Up'],
 	[null, 'B4', 'B2', 'R3'],
 	[null, 'R1', 'R2', null],
 	[null, 'L1', 'L2', null],

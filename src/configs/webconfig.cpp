@@ -839,8 +839,8 @@ std::string setLedOptions()
     readIndex(ledOptions.indexS2, "ledButtonMap", "S2");
     readIndex(ledOptions.indexL3, "ledButtonMap", "L3");
     readIndex(ledOptions.indexR3, "ledButtonMap", "R3");
-    readIndex(ledOptions.indexA1, "ledButtonMap", "A1");
-    readIndex(ledOptions.indexA2, "ledButtonMap", "A2");
+    readIndex(ledOptions.indexE1, "ledButtonMap", "E1");
+    readIndex(ledOptions.indexE2, "ledButtonMap", "E2");
     readDoc(ledOptions.pledType, doc, "pledType");
     docToPin(ledOptions.pledPin1, doc, "pledPin1");
     docToPin(ledOptions.pledPin2, doc, "pledPin2");
@@ -899,8 +899,8 @@ std::string getLedOptions()
     writeIndex("ledButtonMap", "S2", ledOptions.indexS2);
     writeIndex("ledButtonMap", "L3", ledOptions.indexL3);
     writeIndex("ledButtonMap", "R3", ledOptions.indexR3);
-    writeIndex("ledButtonMap", "A1", ledOptions.indexA1);
-    writeIndex("ledButtonMap", "A2", ledOptions.indexA2);
+    writeIndex("ledButtonMap", "E1", ledOptions.indexE1);
+    writeIndex("ledButtonMap", "E2", ledOptions.indexE2);
     writeDoc(doc, "pledType", ledOptions.pledType);
     writeDoc(doc, "pledPin1", ledOptions.pledPin1);
     writeDoc(doc, "pledPin2", ledOptions.pledPin2);
@@ -962,8 +962,8 @@ std::string getButtonLayouts()
     writeDoc(doc, "ledLayout", "indexS2", ledOptions.indexS2);
     writeDoc(doc, "ledLayout", "indexL3", ledOptions.indexL3);
     writeDoc(doc, "ledLayout", "indexR3", ledOptions.indexR3);
-    writeDoc(doc, "ledLayout", "indexA1", ledOptions.indexA1);
-    writeDoc(doc, "ledLayout", "indexA2", ledOptions.indexA2);
+    writeDoc(doc, "ledLayout", "indexE1", ledOptions.indexE1);
+    writeDoc(doc, "ledLayout", "indexE2", ledOptions.indexE2);
 
     writeDoc(doc, "displayLayouts", "buttonLayoutId", displayOptions.buttonLayout);
     for (elementCtr = 0; elementCtr < layoutA.size(); elementCtr++) {
@@ -1039,8 +1039,8 @@ std::string setCustomTheme()
     options.customThemeS2			= readDocDefaultToZero("S2", "u");
     options.customThemeL3			= readDocDefaultToZero("L3", "u");
     options.customThemeR3			= readDocDefaultToZero("R3", "u");
-    options.customThemeA1			= readDocDefaultToZero("A1", "u");
-    options.customThemeA2			= readDocDefaultToZero("A2", "u");
+    options.customThemeE1			= readDocDefaultToZero("E1", "u");
+    options.customThemeE2			= readDocDefaultToZero("E2", "u");
     options.customThemeUpPressed	= readDocDefaultToZero("Up", "d");
     options.customThemeDownPressed	= readDocDefaultToZero("Down", "d");
     options.customThemeLeftPressed	= readDocDefaultToZero("Left", "d");
@@ -1057,8 +1057,8 @@ std::string setCustomTheme()
     options.customThemeS2Pressed	= readDocDefaultToZero("S2", "d");
     options.customThemeL3Pressed	= readDocDefaultToZero("L3", "d");
     options.customThemeR3Pressed	= readDocDefaultToZero("R3", "d");
-    options.customThemeA1Pressed	= readDocDefaultToZero("A1", "d");
-    options.customThemeA2Pressed	= readDocDefaultToZero("A2", "d");
+    options.customThemeE1Pressed	= readDocDefaultToZero("E1", "d");
+    options.customThemeE2Pressed	= readDocDefaultToZero("E2", "d");
 
     uint32_t pressCooldown = 0;
     readDoc(pressCooldown, doc, "buttonPressColorCooldownTimeInMs");
@@ -1104,10 +1104,10 @@ std::string getCustomTheme()
     writeDoc(doc, "S1", "d", options.customThemeS1Pressed);
     writeDoc(doc, "S2", "u", options.customThemeS2);
     writeDoc(doc, "S2", "d", options.customThemeS2Pressed);
-    writeDoc(doc, "A1", "u", options.customThemeA1);
-    writeDoc(doc, "A1", "d", options.customThemeA1Pressed);
-    writeDoc(doc, "A2", "u", options.customThemeA2);
-    writeDoc(doc, "A2", "d", options.customThemeA2Pressed);
+    writeDoc(doc, "E1", "u", options.customThemeE1);
+    writeDoc(doc, "E1", "d", options.customThemeE1Pressed);
+    writeDoc(doc, "E2", "u", options.customThemeE2);
+    writeDoc(doc, "E2", "d", options.customThemeE2Pressed);
     writeDoc(doc, "L3", "u", options.customThemeL3);
     writeDoc(doc, "L3", "d", options.customThemeL3Pressed);
     writeDoc(doc, "R3", "u", options.customThemeR3);

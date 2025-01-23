@@ -68,8 +68,8 @@ static void updateAnimationOptionsProto(const AnimationOptions& options)
 	optionsProto.customThemeR2				= options.customThemeR2;
 	optionsProto.customThemeS1				= options.customThemeS1;
 	optionsProto.customThemeS2				= options.customThemeS2;
-	optionsProto.customThemeA1				= options.customThemeA1;
-	optionsProto.customThemeA2				= options.customThemeA2;
+	optionsProto.customThemeE1				= options.customThemeE1;
+	optionsProto.customThemeE2				= options.customThemeE2;
 	optionsProto.customThemeL3				= options.customThemeL3;
 	optionsProto.customThemeR3				= options.customThemeR3;
 	optionsProto.customThemeUpPressed		= options.customThemeUpPressed;
@@ -86,11 +86,11 @@ static void updateAnimationOptionsProto(const AnimationOptions& options)
 	optionsProto.customThemeR2Pressed		= options.customThemeR2Pressed;
 	optionsProto.customThemeS1Pressed		= options.customThemeS1Pressed;
 	optionsProto.customThemeS2Pressed		= options.customThemeS2Pressed;
-	optionsProto.customThemeA1Pressed		= options.customThemeA1Pressed;
-	optionsProto.customThemeA2Pressed		= options.customThemeA2Pressed;
+	optionsProto.customThemeE1Pressed		= options.customThemeE1Pressed;
+	optionsProto.customThemeE2Pressed		= options.customThemeE2Pressed;
 	optionsProto.customThemeL3Pressed		= options.customThemeL3Pressed;
 	optionsProto.customThemeR3Pressed		= options.customThemeR3Pressed;
-	optionsProto.buttonPressColorCooldownTimeInMs = options.buttonPressColorCooldownTimeInMs;	
+	optionsProto.buttonPressColorCooldownTimeInMs = options.buttonPressColorCooldownTimeInMs;
 }
 
 void Storage::performEnqueuedSaves()
@@ -257,8 +257,8 @@ AnimationOptions AnimationStorage::getAnimationOptions()
 	options.customThemeR2			= optionsProto.customThemeR2;
 	options.customThemeS1			= optionsProto.customThemeS1;
 	options.customThemeS2			= optionsProto.customThemeS2;
-	options.customThemeA1			= optionsProto.customThemeA1;
-	options.customThemeA2			= optionsProto.customThemeA2;
+	options.customThemeE1			= optionsProto.customThemeE1;
+	options.customThemeE2			= optionsProto.customThemeE2;
 	options.customThemeL3			= optionsProto.customThemeL3;
 	options.customThemeR3			= optionsProto.customThemeR3;
 	options.customThemeUpPressed	= optionsProto.customThemeUpPressed;
@@ -275,11 +275,11 @@ AnimationOptions AnimationStorage::getAnimationOptions()
 	options.customThemeR2Pressed	= optionsProto.customThemeR2Pressed;
 	options.customThemeS1Pressed	= optionsProto.customThemeS1Pressed;
 	options.customThemeS2Pressed	= optionsProto.customThemeS2Pressed;
-	options.customThemeA1Pressed	= optionsProto.customThemeA1Pressed;
-	options.customThemeA2Pressed	= optionsProto.customThemeA2Pressed;
+	options.customThemeE1Pressed	= optionsProto.customThemeE1Pressed;
+	options.customThemeE2Pressed	= optionsProto.customThemeE2Pressed;
 	options.customThemeL3Pressed	= optionsProto.customThemeL3Pressed;
 	options.customThemeR3Pressed	= optionsProto.customThemeR3Pressed;
-	options.buttonPressColorCooldownTimeInMs = optionsProto.buttonPressColorCooldownTimeInMs;		
+	options.buttonPressColorCooldownTimeInMs = optionsProto.buttonPressColorCooldownTimeInMs;
 
 	return options;
 }

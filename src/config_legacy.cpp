@@ -113,7 +113,7 @@ namespace ConfigLegacy
         BUTTON_LAYOUT_STICKLESS_13,
         BUTTON_LAYOUT_STICKLESS_16,
         BUTTON_LAYOUT_STICKLESS_14,
-        BUTTON_LAYOUT_STICKLESS_R16,        
+        BUTTON_LAYOUT_STICKLESS_R16,
     };
 
     enum ButtonLayoutRight
@@ -160,7 +160,7 @@ namespace ConfigLegacy
         CUSTOM,
         LEGACY
     };
-    
+
     struct ButtonLayoutParams
     {
         union {
@@ -204,8 +204,8 @@ namespace ConfigLegacy
         int indexS2;
         int indexL3;
         int indexR3;
-        int indexA1;
-        int indexA2;
+        int indexE1;
+        int indexE2;
         int pledType;
         int pledPin1;
         int pledPin2;
@@ -321,7 +321,7 @@ namespace ConfigLegacy
 
     struct GamepadOptions
     {
-        InputMode inputMode {InputMode::INPUT_MODE_XINPUT}; 
+        InputMode inputMode {InputMode::INPUT_MODE_XINPUT};
         DpadMode dpadMode {DpadMode::DPAD_MODE_DIGITAL};
         SOCDMode socdMode {SOCDMode::SOCD_MODE_NEUTRAL};
         bool invertXAxis;
@@ -385,8 +385,8 @@ namespace ConfigLegacy
         uint32_t customThemeS2;
         uint32_t customThemeL3;
         uint32_t customThemeR3;
-        uint32_t customThemeA1;
-        uint32_t customThemeA2;
+        uint32_t customThemeE1;
+        uint32_t customThemeE2;
         uint32_t customThemeUpPressed;
         uint32_t customThemeDownPressed;
         uint32_t customThemeLeftPressed;
@@ -403,8 +403,8 @@ namespace ConfigLegacy
         uint32_t customThemeS2Pressed;
         uint32_t customThemeL3Pressed;
         uint32_t customThemeR3Pressed;
-        uint32_t customThemeA1Pressed;
-        uint32_t customThemeA2Pressed;
+        uint32_t customThemeE1Pressed;
+        uint32_t customThemeE2Pressed;
     };
 
     struct BoardOptions
@@ -593,7 +593,7 @@ static bool isValidButtonLayoutRight(ConfigLegacy::ButtonLayoutRight buttonLayou
         case BUTTON_LAYOUT_KEYBOARD8B:
         case BUTTON_LAYOUT_OPENCORE0WASDB:
         case BUTTON_LAYOUT_STICKLESS_13B:
-        case BUTTON_LAYOUT_STICKLESS_16B: 
+        case BUTTON_LAYOUT_STICKLESS_16B:
         case BUTTON_LAYOUT_STICKLESS_R16B:
         case BUTTON_LAYOUT_STICKLESS_14B:
             return true;
@@ -889,8 +889,8 @@ bool ConfigUtils::fromLegacyStorage(Config& config)
         SET_PROPERTY(ledOptions, indexS2, legacyLEDOptions.indexS2);
         SET_PROPERTY(ledOptions, indexL3, legacyLEDOptions.indexL3);
         SET_PROPERTY(ledOptions, indexR3, legacyLEDOptions.indexR3);
-        SET_PROPERTY(ledOptions, indexA1, legacyLEDOptions.indexA1);
-        SET_PROPERTY(ledOptions, indexA2, legacyLEDOptions.indexA2);
+        SET_PROPERTY(ledOptions, indexE1, legacyLEDOptions.indexE1);
+        SET_PROPERTY(ledOptions, indexE2, legacyLEDOptions.indexE2);
         if (isValidPLEDType(static_cast<PLEDType>(legacyLEDOptions.pledType)))
         {
             SET_PROPERTY(ledOptions, pledType, static_cast<PLEDType>(legacyLEDOptions.pledType));
@@ -933,8 +933,8 @@ bool ConfigUtils::fromLegacyStorage(Config& config)
         SET_PROPERTY(animationOptions, customThemeS2, legacyAnimationOptions.customThemeS2);
         SET_PROPERTY(animationOptions, customThemeL3, legacyAnimationOptions.customThemeL3);
         SET_PROPERTY(animationOptions, customThemeR3, legacyAnimationOptions.customThemeR3);
-        SET_PROPERTY(animationOptions, customThemeA1, legacyAnimationOptions.customThemeA1);
-        SET_PROPERTY(animationOptions, customThemeA2, legacyAnimationOptions.customThemeA2);
+        SET_PROPERTY(animationOptions, customThemeE1, legacyAnimationOptions.customThemeE1);
+        SET_PROPERTY(animationOptions, customThemeE2, legacyAnimationOptions.customThemeE2);
         SET_PROPERTY(animationOptions, customThemeUpPressed, legacyAnimationOptions.customThemeUpPressed);
         SET_PROPERTY(animationOptions, customThemeDownPressed, legacyAnimationOptions.customThemeDownPressed);
         SET_PROPERTY(animationOptions, customThemeLeftPressed, legacyAnimationOptions.customThemeLeftPressed);
@@ -951,8 +951,8 @@ bool ConfigUtils::fromLegacyStorage(Config& config)
         SET_PROPERTY(animationOptions, customThemeS2Pressed, legacyAnimationOptions.customThemeS2Pressed);
         SET_PROPERTY(animationOptions, customThemeL3Pressed, legacyAnimationOptions.customThemeL3Pressed);
         SET_PROPERTY(animationOptions, customThemeR3Pressed, legacyAnimationOptions.customThemeR3Pressed);
-        SET_PROPERTY(animationOptions, customThemeA1Pressed, legacyAnimationOptions.customThemeA1Pressed);
-        SET_PROPERTY(animationOptions, customThemeA2Pressed, legacyAnimationOptions.customThemeA2Pressed);
+        SET_PROPERTY(animationOptions, customThemeE1Pressed, legacyAnimationOptions.customThemeE1Pressed);
+        SET_PROPERTY(animationOptions, customThemeE2Pressed, legacyAnimationOptions.customThemeE2Pressed);
     }
 
     const ConfigLegacy::AddonOptions& legacyAddonOptions = *reinterpret_cast<ConfigLegacy::AddonOptions*>(EEPROM_ADDRESS_START + ADDON_STORAGE_INDEX);
@@ -1081,7 +1081,7 @@ bool ConfigUtils::fromLegacyStorage(Config& config)
         SET_PROPERTY(wiiOptions, deprecatedI2cSDAPin, bytePinToIntPin(legacyAddonOptions.wiiExtensionSDAPin));
         SET_PROPERTY(wiiOptions, deprecatedI2cSCLPin, bytePinToIntPin(legacyAddonOptions.wiiExtensionSCLPin));
         SET_PROPERTY(wiiOptions, deprecatedI2cSpeed, legacyAddonOptions.wiiExtensionSpeed);
-        
+
         PS4Options& ps4Options = config.addonOptions.ps4Options;
         config.addonOptions.has_ps4Options = true;
         SET_PROPERTY(ps4Options, enabled, legacyAddonOptions.PS4ModeAddonEnabled);

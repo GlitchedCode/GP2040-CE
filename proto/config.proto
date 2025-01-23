@@ -230,7 +230,7 @@ message ProfileOptions
 message DisplayOptions
 {
     optional bool enabled = 1;
-    
+
     optional int32 deprecatedI2cBlock = 2 [deprecated = true];
     optional int32 deprecatedI2cSDAPin = 3 [deprecated = true];
     optional int32 deprecatedI2cSCLPin = 4 [deprecated = true];
@@ -294,8 +294,8 @@ message LEDOptions
     optional int32 indexS2 = 20;
     optional int32 indexL3 = 21;
     optional int32 indexR3 = 22;
-    optional int32 indexA1 = 23;
-    optional int32 indexA2 = 24;
+		optional int32 indexE1 = 23;
+		optional int32 indexE2 = 24;
 
     optional PLEDType pledType = 25;
     optional int32 pledPin1 = 26;
@@ -345,8 +345,8 @@ message AnimationOptions_Proto
     optional uint32 customThemeS2 = 22;
     optional uint32 customThemeL3 = 23;
     optional uint32 customThemeR3 = 24;
-    optional uint32 customThemeA1 = 25;
-    optional uint32 customThemeA2 = 26;
+    optional uint32 customThemeE1 = 25;
+    optional uint32 customThemeE2 = 26;
     optional uint32 customThemeUpPressed = 27;
     optional uint32 customThemeDownPressed = 28;
     optional uint32 customThemeLeftPressed = 29;
@@ -363,8 +363,8 @@ message AnimationOptions_Proto
     optional uint32 customThemeS2Pressed = 40;
     optional uint32 customThemeL3Pressed = 41;
     optional uint32 customThemeR3Pressed = 42;
-    optional uint32 customThemeA1Pressed = 43;
-    optional uint32 customThemeA2Pressed = 44;
+    optional uint32 customThemeE1Pressed = 43;
+    optional uint32 customThemeE2Pressed = 44;
     optional uint32 buttonPressColorCooldownTimeInMs = 45;
 }
 
@@ -469,7 +469,7 @@ message ReverseOptions
 message AnalogADS1219Options
 {
     optional bool enabled = 1;
-    
+
     optional int32 deprecatedI2cBlock = 2 [deprecated = true];
     optional int32 deprecatedI2cSDAPin = 3 [deprecated = true];
     optional int32 deprecatedI2cSCLPin = 4 [deprecated = true];
