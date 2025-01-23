@@ -264,7 +264,7 @@ void NeoPicoLEDAddon::process()
         as.HandleEvent(action);
     }
 
-    uint32_t buttonState = gamepad->state.dpad << 16 | gamepad->state.buttons;
+    uint32_t buttonState = gamepad->state.dpad << 16 | gamepad->state.rawButtons | gamepad->state.buttons;
     vector<Pixel> pressed;
     for (auto row : matrix.pixels)
     {
