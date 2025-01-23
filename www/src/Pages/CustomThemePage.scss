@@ -155,11 +155,11 @@ $button-keycap: 19px;
 		@include arcade-button($button-12mm, true);
 		left: $button-12mm * 8;
 	}
-	&.A1 {
+	&.E1 {
 		@include arcade-button($button-12mm, true);
 		left: $button-12mm * 13;
 	}
-	&.A2 {
+	&.E2 {
 		@include arcade-button($button-12mm, true);
 		left: $button-12mm * 18;
 	}
@@ -392,12 +392,12 @@ $button-keycap: 19px;
 }
 
 .led-preview-stickless-13 {
-	.A1 {
+	.E1 {
 		@include arcade-button($button-24mm, true);
 		// left: calc(50% - #{$button-24mm * 3.5});
 		left: calc(
 			50% - #{$button-24mm * 2.5}
-		); // moves a little to the right so when the window is to narrow you can still see the A2 button
+		); // moves a little to the right so when the window is to narrow you can still see the E2 button
 		top: calc(0% - #{$button-24mm * 2.15});
 	}
 	.Up {
@@ -540,7 +540,7 @@ $button-keycap: 19px;
 }
 
 .led-preview-stickless-16 {
-	.A1 {
+	.E1 {
 		@include arcade-button($button-24mm, true);
 		left: calc(50% - #{$button-24mm * 3.5});
 		top: calc(0% - #{$button-24mm * 2.15});
@@ -617,7 +617,7 @@ $button-keycap: 19px;
 		left: calc(59% - #{$button-24mm});
 		top: calc(0% - #{$button-24mm * 2.15});
 	}
-	.A2 {
+	.E2 {
 		@include arcade-button($button-24mm, true);
 		left: calc(50% - #{$button-24mm * 3.5});
 		top: calc(50% + #{$button-24mm * 0.75});
@@ -625,7 +625,7 @@ $button-keycap: 19px;
 }
 
 .led-preview-stickless-16-a {
-	.A1 {
+	.E1 {
 		@include arcade-button($button-24mm, true);
 		left: calc(50% - #{$button-24mm * 3.5});
 		top: calc(0% - #{$button-24mm * 2.15});
@@ -702,7 +702,7 @@ $button-keycap: 19px;
 		left: calc(59% - #{$button-24mm});
 		top: calc(0% - #{$button-24mm * 2.15});
 	}
-	.A2 {
+	.E2 {
 		@include arcade-button($button-24mm, true);
 		left: calc(50% - #{$button-24mm * 11});
 		top: $button-24mm * 2;

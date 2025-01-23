@@ -332,8 +332,8 @@ void addStaticThemes(const LEDOptions& options, const AnimationOptions& animatio
 		customTheme[GAMEPAD_MASK_R2] = RGB(animationOptions.customThemeR2);
 		customTheme[GAMEPAD_MASK_S1] = RGB(animationOptions.customThemeS1);
 		customTheme[GAMEPAD_MASK_S2] = RGB(animationOptions.customThemeS2);
-		customTheme[GAMEPAD_MASK_A1] = RGB(animationOptions.customThemeA1);
-		customTheme[GAMEPAD_MASK_A2] = RGB(animationOptions.customThemeA2);
+		customTheme[GAMEPAD_MASK_E1] = RGB(animationOptions.customThemeE1);
+		customTheme[GAMEPAD_MASK_E2] = RGB(animationOptions.customThemeE2);
 		customTheme[GAMEPAD_MASK_L3] = RGB(animationOptions.customThemeL3);
 		customTheme[GAMEPAD_MASK_R3] = RGB(animationOptions.customThemeR3);
 		CustomTheme::SetCustomTheme(customTheme);
@@ -353,8 +353,8 @@ void addStaticThemes(const LEDOptions& options, const AnimationOptions& animatio
 		customThemePressed[GAMEPAD_MASK_R2] = RGB(animationOptions.customThemeR2Pressed);
 		customThemePressed[GAMEPAD_MASK_S1] = RGB(animationOptions.customThemeS1Pressed);
 		customThemePressed[GAMEPAD_MASK_S2] = RGB(animationOptions.customThemeS2Pressed);
-		customThemePressed[GAMEPAD_MASK_A1] = RGB(animationOptions.customThemeA1Pressed);
-		customThemePressed[GAMEPAD_MASK_A2] = RGB(animationOptions.customThemeA2Pressed);
+		customThemePressed[GAMEPAD_MASK_E1] = RGB(animationOptions.customThemeE1Pressed);
+		customThemePressed[GAMEPAD_MASK_E2] = RGB(animationOptions.customThemeE2Pressed);
 		customThemePressed[GAMEPAD_MASK_L3] = RGB(animationOptions.customThemeL3Pressed);
 		customThemePressed[GAMEPAD_MASK_R3] = RGB(animationOptions.customThemeR3Pressed);
 		CustomThemePressed::SetCustomTheme(customThemePressed);

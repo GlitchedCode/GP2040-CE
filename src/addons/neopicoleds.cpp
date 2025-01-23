@@ -32,8 +32,8 @@ const std::string BUTTON_LABEL_S1 = "S1";
 const std::string BUTTON_LABEL_S2 = "S2";
 const std::string BUTTON_LABEL_L3 = "L3";
 const std::string BUTTON_LABEL_R3 = "R3";
-const std::string BUTTON_LABEL_A1 = "A1";
-const std::string BUTTON_LABEL_A2 = "A2";
+const std::string BUTTON_LABEL_E1 = "E1";
+const std::string BUTTON_LABEL_E2 = "E2";
 
 static std::vector<uint8_t> EMPTY_VECTOR;
 
@@ -327,37 +327,37 @@ std::vector<uint8_t> * NeoPicoLEDAddon::getLEDPositions(string button, std::vect
  */
 std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDButtons(std::vector<std::vector<uint8_t>> *positions)
 {
-	std::vector<std::vector<Pixel>> pixels =
-	{
-		{
-			PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
-			PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
-		},
-		{
-			PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
-			PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
-			PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
-			PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
-			PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
-			PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
-			PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
-			PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
-			PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
-			PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
-			PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
-			PIXEL(BUTTON_LABEL_A1, GAMEPAD_MASK_A1),
-			PIXEL(BUTTON_LABEL_A2, GAMEPAD_MASK_A2),
-		},
-	};
+    std::vector<std::vector<Pixel>> pixels =
+    {
+        {
+            PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
+            PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
+        },
+        {
+            PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
+            PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
+            PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
+            PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
+            PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
+            PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
+            PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
+            PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
+            PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
+            PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
+            PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
+            PIXEL(BUTTON_LABEL_E1, GAMEPAD_MASK_E1),
+            PIXEL(BUTTON_LABEL_E2, GAMEPAD_MASK_E2),
+        },
+    };
 
 	return pixels;
 }
@@ -367,57 +367,57 @@ std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDButtons(std::vector
  */
 std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDStickless(vector<vector<uint8_t>> *positions)
 {
-	std::vector<std::vector<Pixel>> pixels =
-	{
-		{
-			PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
-			NO_PIXEL,
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
-			NO_PIXEL,
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
-			NO_PIXEL,
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
-			NO_PIXEL,
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
-			PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
-			PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
-			PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
-			PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
-			NO_PIXEL,
-		},
-		{
-			PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
-			PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
-			PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
-			PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
-			PIXEL(BUTTON_LABEL_A1, GAMEPAD_MASK_A1),
-			PIXEL(BUTTON_LABEL_A2, GAMEPAD_MASK_A2),
-		},
-	};
+    std::vector<std::vector<Pixel>> pixels =
+    {
+        {
+            PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
+            NO_PIXEL,
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
+            NO_PIXEL,
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
+            NO_PIXEL,
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
+            NO_PIXEL,
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
+            PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
+            PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
+            PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
+            PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
+            NO_PIXEL,
+        },
+        {
+            PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
+            PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
+            PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
+            PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
+            PIXEL(BUTTON_LABEL_E1, GAMEPAD_MASK_E1),
+            PIXEL(BUTTON_LABEL_E2, GAMEPAD_MASK_E2),
+        },
+    };
 
 	return pixels;
 }
@@ -427,45 +427,45 @@ std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDStickless(vector<ve
  */
 std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDWasd(std::vector<std::vector<uint8_t>> *positions)
 {
-	std::vector<std::vector<Pixel>> pixels =
-	{
-		{
-			NO_PIXEL,
-			PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
-		},
-		{
-			PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
-			PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
-		},
-		{
-			NO_PIXEL,
-			PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
-		},
-		{
-			PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
-			PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
-		},
-		{
-			PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
-			PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
-			PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
-			PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
-			PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
-			PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
-			PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
-			PIXEL(BUTTON_LABEL_A1, GAMEPAD_MASK_A1),
-			PIXEL(BUTTON_LABEL_A2, GAMEPAD_MASK_A2),
-		},
-	};
+    std::vector<std::vector<Pixel>> pixels =
+    {
+        {
+            NO_PIXEL,
+            PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
+        },
+        {
+            PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
+            PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
+        },
+        {
+            NO_PIXEL,
+            PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
+        },
+        {
+            PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
+            PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
+        },
+        {
+            PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
+            PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
+            PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
+            PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
+            PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
+            PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
+            PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
+            PIXEL(BUTTON_LABEL_E1, GAMEPAD_MASK_E1),
+            PIXEL(BUTTON_LABEL_E2, GAMEPAD_MASK_E2),
+        },
+    };
 
 	return pixels;
 }
@@ -475,45 +475,45 @@ std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDWasd(std::vector<st
  */
 std::vector<std::vector<Pixel>> NeoPicoLEDAddon::generatedLEDWasdFBM(std::vector<std::vector<uint8_t>> *positions)
 {
-	std::vector<std::vector<Pixel>> pixels =
-	{
-		{
-			PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
-			PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
-			PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
-			PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
-		},
-		{
-			PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
-			PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
-		},
-		{
-			NO_PIXEL,
-			PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
-		},
-		{
-			PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
-			PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
-		},
-		{
-			NO_PIXEL,
-			PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
-		},
-		{
-			PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
-			PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
-			PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
-			PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
-			PIXEL(BUTTON_LABEL_A1, GAMEPAD_MASK_A1),
-			PIXEL(BUTTON_LABEL_A2, GAMEPAD_MASK_A2),
-		},
-	};
+    std::vector<std::vector<Pixel>> pixels =
+    {
+        {
+            PIXEL(BUTTON_LABEL_L1, GAMEPAD_MASK_L1),
+            PIXEL(BUTTON_LABEL_L2, GAMEPAD_MASK_L2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_R1, GAMEPAD_MASK_R1),
+            PIXEL(BUTTON_LABEL_R2, GAMEPAD_MASK_R2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_B4, GAMEPAD_MASK_B4),
+            PIXEL(BUTTON_LABEL_B2, GAMEPAD_MASK_B2),
+        },
+        {
+            PIXEL(BUTTON_LABEL_B3, GAMEPAD_MASK_B3),
+            PIXEL(BUTTON_LABEL_B1, GAMEPAD_MASK_B1),
+        },
+        {
+            NO_PIXEL,
+            PIXEL(BUTTON_LABEL_LEFT, GAMEPAD_MASK_DL),
+        },
+        {
+            PIXEL(BUTTON_LABEL_UP, GAMEPAD_MASK_DU),
+            PIXEL(BUTTON_LABEL_DOWN, GAMEPAD_MASK_DD),
+        },
+        {
+            NO_PIXEL,
+            PIXEL(BUTTON_LABEL_RIGHT, GAMEPAD_MASK_DR),
+        },
+        {
+            PIXEL(BUTTON_LABEL_S1, GAMEPAD_MASK_S1),
+            PIXEL(BUTTON_LABEL_S2, GAMEPAD_MASK_S2),
+            PIXEL(BUTTON_LABEL_L3, GAMEPAD_MASK_L3),
+            PIXEL(BUTTON_LABEL_R3, GAMEPAD_MASK_R3),
+            PIXEL(BUTTON_LABEL_E1, GAMEPAD_MASK_E1),
+            PIXEL(BUTTON_LABEL_E2, GAMEPAD_MASK_E2),
+        },
+    };
 
 	return pixels;
 }
@@ -561,32 +561,32 @@ std::vector<std::vector<Pixel>> NeoPicoLEDAddon::createLEDLayout(ButtonLayout la
 
 uint8_t NeoPicoLEDAddon::setupButtonPositions()
 {
-	const LEDOptions& ledOptions = Storage::getInstance().getLedOptions();
-	buttonPositions.clear();
-	buttonPositions.emplace(BUTTON_LABEL_UP, ledOptions.indexUp);
-	buttonPositions.emplace(BUTTON_LABEL_DOWN, ledOptions.indexDown);
-	buttonPositions.emplace(BUTTON_LABEL_LEFT, ledOptions.indexLeft);
-	buttonPositions.emplace(BUTTON_LABEL_RIGHT, ledOptions.indexRight);
-	buttonPositions.emplace(BUTTON_LABEL_B1, ledOptions.indexB1);
-	buttonPositions.emplace(BUTTON_LABEL_B2, ledOptions.indexB2);
-	buttonPositions.emplace(BUTTON_LABEL_B3, ledOptions.indexB3);
-	buttonPositions.emplace(BUTTON_LABEL_B4, ledOptions.indexB4);
-	buttonPositions.emplace(BUTTON_LABEL_L1, ledOptions.indexL1);
-	buttonPositions.emplace(BUTTON_LABEL_R1, ledOptions.indexR1);
-	buttonPositions.emplace(BUTTON_LABEL_L2, ledOptions.indexL2);
-	buttonPositions.emplace(BUTTON_LABEL_R2, ledOptions.indexR2);
-	buttonPositions.emplace(BUTTON_LABEL_S1, ledOptions.indexS1);
-	buttonPositions.emplace(BUTTON_LABEL_S2, ledOptions.indexS2);
-	buttonPositions.emplace(BUTTON_LABEL_L3, ledOptions.indexL3);
-	buttonPositions.emplace(BUTTON_LABEL_R3, ledOptions.indexR3);
-	buttonPositions.emplace(BUTTON_LABEL_A1, ledOptions.indexA1);
-	buttonPositions.emplace(BUTTON_LABEL_A2, ledOptions.indexA2);
-	uint8_t buttonCount = 0;
-	for (auto const& buttonPosition : buttonPositions)
-	{
-		if (buttonPosition.second > -1)
-			buttonCount++;
-	}
+    const LEDOptions& ledOptions = Storage::getInstance().getLedOptions();
+    buttonPositions.clear();
+    buttonPositions.emplace(BUTTON_LABEL_UP, ledOptions.indexUp);
+    buttonPositions.emplace(BUTTON_LABEL_DOWN, ledOptions.indexDown);
+    buttonPositions.emplace(BUTTON_LABEL_LEFT, ledOptions.indexLeft);
+    buttonPositions.emplace(BUTTON_LABEL_RIGHT, ledOptions.indexRight);
+    buttonPositions.emplace(BUTTON_LABEL_B1, ledOptions.indexB1);
+    buttonPositions.emplace(BUTTON_LABEL_B2, ledOptions.indexB2);
+    buttonPositions.emplace(BUTTON_LABEL_B3, ledOptions.indexB3);
+    buttonPositions.emplace(BUTTON_LABEL_B4, ledOptions.indexB4);
+    buttonPositions.emplace(BUTTON_LABEL_L1, ledOptions.indexL1);
+    buttonPositions.emplace(BUTTON_LABEL_R1, ledOptions.indexR1);
+    buttonPositions.emplace(BUTTON_LABEL_L2, ledOptions.indexL2);
+    buttonPositions.emplace(BUTTON_LABEL_R2, ledOptions.indexR2);
+    buttonPositions.emplace(BUTTON_LABEL_S1, ledOptions.indexS1);
+    buttonPositions.emplace(BUTTON_LABEL_S2, ledOptions.indexS2);
+    buttonPositions.emplace(BUTTON_LABEL_L3, ledOptions.indexL3);
+    buttonPositions.emplace(BUTTON_LABEL_R3, ledOptions.indexR3);
+    buttonPositions.emplace(BUTTON_LABEL_E1, ledOptions.indexE1);
+    buttonPositions.emplace(BUTTON_LABEL_E2, ledOptions.indexE2);
+    uint8_t buttonCount = 0;
+    for (auto const& buttonPosition : buttonPositions)
+    {
+        if (buttonPosition.second > -1)
+            buttonCount++;
+    }
 
 	return buttonCount;
 }
