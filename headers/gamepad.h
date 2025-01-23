@@ -66,6 +66,13 @@ public:
 	}
 
 	/**
+	 * @brief Check if button is pressed physically, not logically
+	 */
+	inline bool __attribute__((always_inline)) pressedRawButton(const uint32_t mask) {
+		return (state.rawButtons & mask) != 0;
+	}
+
+	/**
 	 * @brief Check for a dpad press. Used by `pressed[Dpad]` helper methods.
 	 */
 	inline bool __attribute__((always_inline)) pressedDpad(const uint8_t mask) {
@@ -92,6 +99,7 @@ public:
 	 */
 	inline GamepadHotkey __attribute__((always_inline)) selectHotkey(const HotkeyEntry hotkey) {
 		state.buttons &= ~(hotkey.buttonsMask);
+		state.rawButtons |= hotkey.buttonsMask;
 		state.dpad &= ~(hotkey.dpadMask);
 		return static_cast<GamepadHotkey>(hotkey.action);
 	}

@@ -331,7 +331,7 @@ void Gamepad::read()
 		| ((values & mapDigitalRight->pinMask) ? (mapDigitalRight->buttonMask) | (mapDigitalRight->buttonMask << 4) : 0)
 	;
 
-	state.buttons = 0
+	state.rawButtons = state.buttons = 0
 		| ((values & mapButtonB1->pinMask)  ? mapButtonB1->buttonMask  : 0)
 		| ((values & mapButtonB2->pinMask)  ? mapButtonB2->buttonMask  : 0)
 		| ((values & mapButtonB3->pinMask)  ? mapButtonB3->buttonMask  : 0)
@@ -436,6 +436,7 @@ void Gamepad::hotkey()
 void Gamepad::clearState() {
 	state.dpad = 0;
 	state.buttons = 0;
+	state.rawButtons = 0;
 	state.aux = 0;
 	state.lx = GAMEPAD_JOYSTICK_MID;
 	state.ly = GAMEPAD_JOYSTICK_MID;

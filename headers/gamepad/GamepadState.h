@@ -137,6 +137,7 @@ struct GamepadState
 {
 	uint8_t dpad {0};
 	uint32_t buttons {0};
+	uint32_t rawButtons {0};
 	uint16_t aux {0};
 	uint16_t lx {GAMEPAD_JOYSTICK_MID};
 	uint16_t ly {GAMEPAD_JOYSTICK_MID};
