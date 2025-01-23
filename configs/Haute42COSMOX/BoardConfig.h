@@ -92,10 +92,10 @@
 #define LEDS_BUTTON_B2   9
 #define LEDS_BUTTON_R2   10
 #define LEDS_BUTTON_L2   11
-#define LEDS_BUTTON_A1   12
+#define LEDS_BUTTON_E1   12
 #define LEDS_BUTTON_L3   13
 #define LEDS_BUTTON_R3   14
-#define LEDS_BUTTON_A2   15
+#define LEDS_BUTTON_E2   15
 
 #define HAS_I2C_DISPLAY 1
 #define I2C0_ENABLED 1
@@ -107,8 +107,8 @@
 #define SPLASH_DURATION 3000
 
 // Additional Button Support
-#define GPIO_PIN_27 GpioAction::BUTTON_PRESS_UP
-#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_L3
+#define GPIO_PIN_27 GpioAction::BUTTON_PRESS_E1
+#define GPIO_PIN_26 GpioAction::BUTTON_PRESS_E2
 
 // Keyboard Host enabled by default
 #define KEYBOARD_HOST_ENABLED 1
